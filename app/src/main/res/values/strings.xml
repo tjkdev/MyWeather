@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">My Weather</string>
+
+    <string name="empty"></string>
+    <string name="unit_mm">%smm</string>
+    <string name="unit_cm">%scm</string>
+    <string name="unit_m">%sm</string>
+    <string name="unit_percent">%s%%</string>
+    <string name="unit_temperature">%s℃</string>
+    
+    <string name="sky_clear">맑음</string>
+    <string name="sky_little_cloudy">구름 많음</string>
+    <string name="sky_cloudy">흐림</string>
+
+    <string name="weather_rain">비</string>
+    <string name="weather_rain_snow">비/눈</string>
+    <string name="weather_snow">눈</string>
+    <string name="weather_shower">소나기</string>
+
+    <string name="rain_no">강수없음</string>
+    <string name="snow_no">적설없음</string>
+
+    <string name="north">북</string>
+    <string name="northeast">북동</string>
+    <string name="east">동</string>
+    <string name="southeast">남동</string>
+    <string name="south">남</string>
+    <string name="southwest">남서</string>
+    <string name="west">서</string>
+    <string name="northwest">북서</string>
+
+    <string name="title_current">현재 날씨</string>
+    <string name="title_forecast">예보</string>
+</resources>
