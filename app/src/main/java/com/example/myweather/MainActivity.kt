@@ -54,6 +54,8 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
 
         val pages = listOf(getString(R.string.title_current), getString(R.string.title_forecast))
+        val weatherInfo = viewModel.outputs.currentLocationWeather()
+        val weatherForecastInfo = viewModel.outputs.currentLocationForecastWeather()
         setContent {
             MyWeatherTheme {
                 // A surface container using the 'background' color from the theme
@@ -96,11 +98,9 @@ class MainActivity : ComponentActivity() {
                             modifier = Modifier.fillMaxSize()
                         ) {
                             if (currentPage == 0) {
-                                val weatherInfo = viewModel.outputs.currentLocationWeather().observeAsState().value ?: emptyList()
-                                CurrentWeatherView(weatherInfo)
+                                CurrentWeatherView(weatherInfo.observeAsState().value ?: emptyList())
                             } else {
-                                val weatherInfo = viewModel.outputs.currentLocationForecastWeather().observeAsState().value ?: emptyList()
-                                ForecastWeatherView(weatherInfo)
+                                ForecastWeatherView(weatherForecastInfo.observeAsState().value ?: emptyList())
                             }
                             val failure = viewModel.outputs.networkFailure().observeAsState().value
                             ShowError(error = failure)
